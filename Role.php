@@ -40,8 +40,21 @@ class Role {
 
 // -------------------------FONCTIONS--------------------------------
 
-    // public function ajouterRoleCasting(F){
-    //     $this->castings[]=$film;
-    // }
-    // ajouter chaque objet film dans le tableau répértoriant les films d'un acteur 
+    public function __toString(){
+        return $this->nomPersonnage;
+    }
+
+    public function ajouterRoleCasting(Acteur $acteur){
+        $this->castings[]=$acteur;
+    }
+    // ajouter chaque objet acteur dans le tableau Casting répertoriant acteur, role, film
+
+    public function afficherRoleActeur(){
+        $result =  "<h1>Acteurs ayant interprétés $this</h1>";
+        foreach ($this->castings as $acteur) {
+            $result .= $acteur."<br>";
+        }
+        return $result;
+    }
+    // afficher les acteurs qui ont interprete ce role
 }
