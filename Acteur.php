@@ -2,47 +2,68 @@
 // -------------------heritage de la classe Personne---------------------
 
 class Acteur extends Personne{
-    protected array $filmsActeur;
+    private array $castings;
+    private Role $role;
+    private Film $film;
     
     public function __construct($prenom, $nom, $sexe, $dateNaissance) {
         parent::__construct($prenom, $nom, $sexe, $dateNaissance);
-        $this->filmsActeur = [];
-        // $this->role->ajouterRoleCasting($this);
-    }
-
-    public function getFilmsActeur() : array
-    {
-        return $this->filmsActeur;
+        $this->castings=[];
+        $this->role=$role;
+        $this->film=$film;
     }
 
 
-    public function setFilmsActeur($filmsActeur)
+    // -----------------------------------FONCTIONS----------------------------
+    public function getRole()
     {
-        $this->filmsActeur = $filmsActeur;
+        return $this->role;
+    }
+
+
+    public function setRole($role)
+    {
+        $this->role = $role;
 
         return $this;
     }
 
-    // -----------------------------------FONCTIONS----------------------------
+
+    public function getFilm()
+    {
+        return $this->film;
+    }
+
+
+    public function setFilm($film)
+    {
+        $this->film = $film;
+
+        return $this;
+    }
 
     public function __toString(){
         return $this->prenom." ".$this->nom;
     }
 
-// ajouter chaque objet film dans le tableau répértoriant les films d'un acteur 
-
-    public function ajouterFilmActeur(Film $film) {
-        $this->filmsActeur[] = $film;
+    // ----------------------fonctions-------------------------------
+    public function ajouterActeurCasting(Casting $casting){
+        $this->castings[] = $casting;
     }
-
-// afficher ce même tableau 
+        // ajouter chaque objet acteur dans le tableau Casting qui va répertorier acteur, role, nom du film
 
     public function afficherFilmographieActeur(){
-        $result =  "<h1>Films de $this</h1>";
-        foreach ($this->filmsActeur as $film) {
-            $result .= $film."<br>";
+        $result =  "<h1>Films dans lequel $this a joué </h1>";
+        foreach ($this->castings as $casting) {
+            $result .= $casting."<br>";
         }
         return $result;
     }
+
+    public function afficherFilmRole(){
+        return $this->film->getTitreFilm().$this->role->getNomPersonnage();
+    }
+
+
 
 }

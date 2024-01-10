@@ -2,7 +2,6 @@
 
 class Role {
     private string $nomPersonnage;
-    private array $castings;
 
     public function __construct(string $nomPersonnage){
         $this->nomPersonnage=$nomPersonnage;
@@ -44,17 +43,17 @@ class Role {
         return $this->nomPersonnage;
     }
 
-    // public function ajouterRoleCasting(Acteur $acteur){
-    //     $this->castings[]=$acteur;
-    // }
-    // // ajouter chaque objet acteur dans le tableau Casting qui va répertorier acteur, role, nom du film
+    public function ajouterRoleCasting(Casting $casting){
+        $this->castings[] = $casting;
+    }
+    // ajouter chaque objet role dans le tableau Casting qui va répertorier acteur, role, nom du film
 
-    // public function afficherRoleActeur(){
-    //     $result =  "<h1>Acteurs ayant interprétés $this</h1>";
-    //     foreach ($this->castings as $acteur) {
-    //         $result .= $acteur."<br>";
-    //     }
-    //     return $result;
-    // }
-    // afficher les acteurs qui ont interprete ce role
+    public function afficherRole(){
+        $result =  "<h1>Liste des acteurs ayant interprétés $this </h1>";
+        foreach ($this->castings as $film) {
+            $result .= $film."<br>";
+        }
+        return $result;
+    }
+//  il faut refaire cette fonction
 }

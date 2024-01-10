@@ -3,7 +3,7 @@
 // -------------------heritage de la classe Personne---------------------
 
 class Realisateur extends Personne{
-    protected array $filmsRealisateur;
+    private array $filmsRealisateur;
 
 
     public function __construct($prenom, $nom, $sexe, $dateNaissance) {
