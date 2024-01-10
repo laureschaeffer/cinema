@@ -52,13 +52,13 @@ class Acteur extends Personne{
     }
         // ajouter chaque objet acteur dans le tableau Casting qui va répertorier acteur, role, nom du film
 
-    public function afficherFilmographieActeur(){
-        $result =  "<h1>Films dans lequel $this a joué </h1>";
-        foreach ($this->castings as $casting) {
-            $result .= $casting."<br>";
-        }
-        return $result;
-    }
+    // public function afficherFilmographieActeur(){
+    //     $result =  "<h1>Films dans lequel $this a joué </h1>";
+    //     foreach ($this->castings as $casting) {
+    //         $result .= $casting."<br>";
+    //     }
+    //     return $result;
+    // }          fonctions à refaire
 
     public function afficherFilmRole(){
         return $this->film->getTitreFilm().$this->role->getNomPersonnage();
