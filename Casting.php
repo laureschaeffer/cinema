@@ -59,6 +59,6 @@ class Casting {
 
 
    public function afficherInfoCasting(){
-        return "Dans le film $this->film l'acteur $this->acteur a joué $this->role";
+        return "<p class='text'> <h2> Dans le film $this->film l'acteur $this->acteur a joué $this->role </h2> </p> <br>";
    }
-}
+} 

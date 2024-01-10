@@ -41,9 +41,9 @@ class Realisateur extends Personne{
 // afficher ce même tableau 
 
     public function afficherFilmographieRealisateur(){
-        $result =  "<h1>Films de $this</h1>";
+        $result =  "<h2>Films de $this</h2>";
         foreach ($this->filmsRealisateur as $film) {
-            $result .= $film."<br>";
+            $result .= "<p class='text'>".$film." </p> <br>";
         }
         return $result;
     }

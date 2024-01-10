@@ -125,9 +125,11 @@ class Film{
 
         // ajouter chaque objet film dans le tableau Casting qui va répertorier acteur, role, nom du film
 
-    // public function afficherRoleActeur(){
-    //     return $this->role->getNomPersonnage();
-    // }
-
-
+    public function afficherActeurRole(){
+        $result =  "<h2> Les acteurs ayant joué dans le film $this</h2>";
+        foreach ($this->castings as $casting) {
+            $result .= "<p class='text'>".$casting->getActeur(). " dans le role de ". $casting->getRole()."<br> </p>";
+        }
+        return $result;
+    } 
 }

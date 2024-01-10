@@ -1,3 +1,19 @@
+<!-- --------------------style sur les résultats----------------------- -->
+<style>
+    h2{
+        color: purple;
+        text-align: center;
+    }
+
+    .text{
+        background-color: antiquewhite;
+        padding: 1% 1%;
+        border-radius: 10px 10px 10px 10px;
+        text-align: center;
+    }
+
+</style>
+
 <?php
 
 spl_autoload_register(function ($class_name) {
@@ -27,17 +43,13 @@ $jamesGordon= new Role("James Gordon");
 $casting1= new Casting($christianBale, $batmanPerso, $batman);
 $casting2= new Casting($garyOldman, $jamesGordon, $batman);
 
-echo $batman->afficherInfoFilm();
-echo "<br> <br>";
-echo $interstellar->afficherInfoFilm();
 
 echo $thriller->afficherFilmographieGenre();
+echo $scienceFiction->afficherFilmographieGenre();
 echo $ChristopherNolan->afficherFilmographieRealisateur();
-echo "<br> <br>";
 
-
-echo $casting1->afficherInfoCasting()."<br><br>";
-
-
-// echo $christianBale->afficherFilmographieActeur();
+echo $christianBale->afficherFilmographieActeur();
+echo $batmanPerso->afficherRole();
+echo $batman->afficherActeurRole();
+echo $casting1->afficherInfoCasting();
 

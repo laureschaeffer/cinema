@@ -48,12 +48,13 @@ class Role {
     }
     // ajouter chaque objet role dans le tableau Casting qui va répertorier acteur, role, nom du film
 
+
     public function afficherRole(){
-        $result =  "<h1>Liste des acteurs ayant interprétés $this </h1>";
-        foreach ($this->castings as $film) {
-            $result .= $film."<br>";
+        $result =  "<h2> Les acteurs ayant interprétés $this dans leur film </h2>";
+        foreach ($this->castings as $casting) {
+            $result .= "<p class='text'>".$casting->getActeur(). " - ". $casting->getFilm()."</p> <br>";
         }
         return $result;
-    }
-//  il faut refaire cette fonction
+    } 
+
 }

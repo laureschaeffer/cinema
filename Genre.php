@@ -39,9 +39,9 @@ class Genre {
 // afficher ce même tableau 
 
     public function afficherFilmographieGenre(){
-        $result =  "<h1>Films de $this</h1>";
+        $result =  "<h2>Films de $this</h2>";
         foreach ($this->genreFilms as $film) {
-            $result .= $film."<br>";
+            $result .= "<p class='text'>".$film."</p> <br>";
         }
         return $result;
     }
