@@ -3,6 +3,7 @@
 class Film{
     private Genre $genre;
     private Realisateur $realisateur;
+    private Acteur $acteur;
     private string $titreFilm;
     private int $anneeSortieFilm;
     private int $dureeFilm;
@@ -10,9 +11,9 @@ class Film{
     private array $castings;
 
 
-// je relie l'objet Genre pour pouvoir ajouter chaque film à son genre 
+// je relie l'objet Genre et réalisateur pour pouvoir ajouter chaque film à son genre et son real
 
-    public function __construct(Genre $genre, Realisateur $realisateur, string $titreFilm, int $anneeSortieFilm, int $dureeFilm, string $resume){
+    public function __construct(Genre $genre, Realisateur $realisateur, Acteur $acteur, string $titreFilm, int $anneeSortieFilm, int $dureeFilm, string $resume){
         $this->genre=$genre;
         $this->realisateur=$realisateur;
         $this->titreFilm=$titreFilm;

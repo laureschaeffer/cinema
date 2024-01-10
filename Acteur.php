@@ -7,9 +7,10 @@ class Acteur extends Personne{
     public function __construct($prenom, $nom, $sexe, $dateNaissance) {
         parent::__construct($prenom, $nom, $sexe, $dateNaissance);
         $this->filmsActeur = [];
+        // $this->role->ajouterRoleCasting($this);
     }
 
-    public function getFilmsActeur()
+    public function getFilmsActeur() : array
     {
         return $this->filmsActeur;
     }

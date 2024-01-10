@@ -44,17 +44,17 @@ class Role {
         return $this->nomPersonnage;
     }
 
-    public function ajouterRoleCasting(Acteur $acteur){
-        $this->castings[]=$acteur;
-    }
-    // ajouter chaque objet acteur dans le tableau Casting répertoriant acteur, role, film
+    // public function ajouterRoleCasting(Acteur $acteur){
+    //     $this->castings[]=$acteur;
+    // }
+    // // ajouter chaque objet acteur dans le tableau Casting qui va répertorier acteur, role, nom du film
 
-    public function afficherRoleActeur(){
-        $result =  "<h1>Acteurs ayant interprétés $this</h1>";
-        foreach ($this->castings as $acteur) {
-            $result .= $acteur."<br>";
-        }
-        return $result;
-    }
+    // public function afficherRoleActeur(){
+    //     $result =  "<h1>Acteurs ayant interprétés $this</h1>";
+    //     foreach ($this->castings as $acteur) {
+    //         $result .= $acteur."<br>";
+    //     }
+    //     return $result;
+    // }
     // afficher les acteurs qui ont interprete ce role
 }
